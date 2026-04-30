@@ -154,6 +154,7 @@
             btnSaveFile.TabIndex = 8;
             btnSaveFile.Text = "저장";
             btnSaveFile.UseVisualStyleBackColor = false;
+            
             // 
             // btnOpenFile
             // 
