@@ -192,6 +192,7 @@ namespace SimplePaint
                 startPointImage = new Point(ix, iy);
             }
         }
+        // 과제2
         private void PicCanvas_MouseMove(object sender, MouseEventArgs e)
         {
             if (!isDrawing) return; // 그림 그리기와 상관 없는 마우스 움직임은무시
