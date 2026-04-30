@@ -40,6 +40,7 @@
             btnSaveFile = new Button();
             btnOpenFile = new Button();
             picCanvas = new PictureBox();
+            pnlCanvas = new Panel();
             grpShape.SuspendLayout();
             grpColor.SuspendLayout();
             grpWidth.SuspendLayout();
@@ -172,18 +173,26 @@
             // 
             picCanvas.BackColor = Color.White;
             picCanvas.BorderStyle = BorderStyle.FixedSingle;
-            picCanvas.Location = new Point(23, 342);
+            picCanvas.Location = new Point(0, 0);
             picCanvas.Name = "picCanvas";
             picCanvas.Size = new Size(1191, 542);
             picCanvas.TabIndex = 10;
             picCanvas.TabStop = false;
+            // 
+            // pnlCanvas
+            // 
+            pnlCanvas.AutoScroll = true;
+            pnlCanvas.Location = new Point(23, 342);
+            pnlCanvas.Name = "pnlCanvas";
+            pnlCanvas.Size = new Size(1191, 542);
+            pnlCanvas.TabIndex = 11;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1250, 910);
-            Controls.Add(picCanvas);
+            Controls.Add(pnlCanvas);
             Controls.Add(btnOpenFile);
             Controls.Add(btnSaveFile);
             Controls.Add(grpWidth);
@@ -192,12 +201,14 @@
             Controls.Add(lblAppName);
             Name = "Form1";
             Text = "Simple Paint v1.0";
+            KeyPreview = true;
             grpShape.ResumeLayout(false);
             grpColor.ResumeLayout(false);
             grpWidth.ResumeLayout(false);
             grpWidth.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)trbLineWidth).EndInit();
             ((System.ComponentModel.ISupportInitialize)picCanvas).EndInit();
+            pnlCanvas.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -215,6 +226,8 @@
         private TrackBar trbLineWidth;
         private Button btnSaveFile;
         private Button btnOpenFile;
+        private Panel pnlCanvas;
         private PictureBox picCanvas;
+
     }
 }
